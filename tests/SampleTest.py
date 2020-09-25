@@ -1,4 +1,7 @@
 import unittest
+from contextlib import redirect_stdout
+
+from io import StringIO
 
 from approvaltests.approvals import verify
 
@@ -20,4 +23,14 @@ class RegressionTest(unittest.TestCase):
         from CodeGoesHere import sample
         verify(sample(), self.reporter)
 
+    def test_trivia_with_approvals(self):
+        verify(self.play_trivia(), self.reporter)
+
+    def play_trivia(self):
+        from Trivia import play
+        string_io = StringIO()
+
+        with redirect_stdout(string_io):
+            play()
+        return string_io.getvalue()
 
