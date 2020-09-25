@@ -2,6 +2,7 @@ import unittest
 from contextlib import redirect_stdout
 
 from io import StringIO
+import random
 
 from approvaltests.approvals import verify
 
@@ -31,6 +32,7 @@ class RegressionTest(unittest.TestCase):
         string_io = StringIO()
 
         with redirect_stdout(string_io):
+            random.seed(0)
             play()
         return string_io.getvalue()
 
