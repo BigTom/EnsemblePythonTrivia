@@ -9,3 +9,4 @@ Starter project for getting approvaltests up and running
 
 tom was here, Alice was here too
 ToF was here..
+We can all run tests
