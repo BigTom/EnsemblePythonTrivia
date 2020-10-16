@@ -1,0 +1,52 @@
+What do we want to get out of sessions?
+- Technical learning?
+- How to do ensemble programming?
+    - How to introduce this?
+- Getting to know people
+- Patterns of group decisions dealing with technical?
+
+Do we lose "the big picture"?
+How do we balance it?
+Time for deciding direction
+
+Can we be a "school of fish?"
+Meercats?
+
+Challenging problems can highlight any disfunctions in the ensemble
+
+13:02:01	 From ToF : Hello all
+13:02:10	 From ToF : time to get coffee
+13:02:11	 From ToF : brb
+13:18:40	 From Tom Ayerst, UK, near Brighton : https://mobtimer.com/
+13:19:18	 From Jagan : https://mobti.me/arrested-hippy?
+13:21:32	 From Jagan : https://mobti.me/
+13:22:07	 From Tom Ayerst, UK, near Brighton : https://mobti.me/euro-ensemble?
+13:23:17	 From Rahul Agrawal : I would love to observe..as I have no python background.
+13:24:53	 From Tom Ayerst, UK, near Brighton : No problem
+13:50:36	 From Dustinson : BTW: I'm loving mobti.me.  Who's recommendation was this?  I'd love to give them credit when I tweet this.
+13:50:55	 From Jagan : I did
+13:51:23	 From Dustinson : I particularly love having a shared goals section so ppl can keep focus on the job at hand without loosing the other things which pop up.
+13:52:17	 From Jagan : no
+14:01:29	 From Luis Gutierrez : I still am trying to figure out what's the correct amount of discussion to have when the ensemble is first getting started for the session.
+14:01:31	 From Dustinson : I love the mobbing website.  Especially liked the goals area to keep ppl focused.
+14:01:33	 From Emily : observations: what happened? Questions? Confusions?
+14:01:35	 From Tom Ayerst, UK, near Brighton : Introductions
+14:01:52	 From ToF : setting up tools
+14:02:01	 From Tom Ayerst, UK, near Brighton : suggested to continue python approval tests
+14:02:18	 From Tom Ayerst, UK, near Brighton : We used https://mobti.me/euro-ensemble?
+14:02:25	 From ToF : measured the test coverage of the present solution
+14:02:25	 From Luis Gutierrez : changed production code to allow number of questions parameter
+14:02:30	 From Tom Ayerst, UK, near Brighton : Used screen sharing
+14:02:36	 From Dustinson : I appreciated ppl learning the language in the ensemble setting.
+14:02:59	 From Tom Ayerst, UK, near Brighton : Modified the seed value to see if it changes covereage
+14:03:18	 From Tom Ayerst, UK, near Brighton : Increased number of questions in a run
+14:03:19	 From ToF : hypothesis was : coverage depends on the seed value because questions are chosen upon dice roll
+14:03:28	 From Tom Ayerst, UK, near Brighton : Still missing some coverage
+14:03:46	 From ToF : my confusion : we had one test failing and started changing production code
+14:03:58	 From Tom Ayerst, UK, near Brighton : Installed python coverage tool
+14:04:04	 From ToF : "refactoring on red"
+14:04:13	 From ToF : I was trembling all the time :-)
+14:05:06	 From Rahul Agrawal : changed color around  for better visibility around coverage.
+14:06:04	 From Sim : towards the beginning, installed coverage tool through pip install coverage
+14:07:24	 From ToF : relationship between # of questions and coverage?
+15:00:14	 From ToF : I have to leave. It was great to ensemble with you!!

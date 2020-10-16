@@ -1,0 +1,17 @@
+Observations
+setting up environment was much faster than doing it alone
+Did not use driver navigator pattern, but worked with three, don't think it would have worked with more people
+We LIKE PyCharm!
+Workflow for approval tests is not clear initially (Instance of Golden master pattern) - may need more detailed readme
+
+Happy we achieved our goal
+Kept goal small enough, and got there
+
+Helpful to have someone familiar with approval tests, even in a different language
+
+Always look at the error messages!
+(Possible issue due to lack of formal structure)
+
+We did not like the test code always emitting a warning.
+
+Next week: Lets fix the warnings in Python Approvals Test library!

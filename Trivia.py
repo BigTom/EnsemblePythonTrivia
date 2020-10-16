@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
+MAX_PLAYERS = 6
+
 
 class Game:
-    def __init__(self):
+    def __init__(self, number_of_questions=50):
         self.players = []
-        self.places = [0] * 6
-        self.purses = [0] * 6
-        self.in_penalty_box = [0] * 6
+        self.places = [0] * MAX_PLAYERS
+        self.purses = [0] * MAX_PLAYERS
+        self.in_penalty_box = [0] * MAX_PLAYERS
 
         self.pop_questions = []
         self.science_questions = []
@@ -15,7 +17,7 @@ class Game:
         self.current_player = 0
         self.is_getting_out_of_penalty_box = False
 
-        for i in range(50):
+        for i in range(number_of_questions):
             self.pop_questions.append("Pop Question %s" % i)
             self.science_questions.append("Science Question %s" % i)
             self.sports_questions.append("Sports Question %s" % i)
@@ -23,9 +25,6 @@ class Game:
 
     def create_rock_question(self, index):
         return "Rock Question %s" % index
-
-    def is_playable(self):
-        return self.how_many_players >= 2
 
     def add(self, player_name):
         self.players.append(player_name)
@@ -117,7 +116,7 @@ class Game:
 
         else:
 
-            print("Answer was corrent!!!!")
+            print("Answer was correct!!!!")
             self.purses[self.current_player] += 1
             print(self.players[self.current_player] + \
                 ' now has ' + \
@@ -146,14 +145,14 @@ class Game:
 from random import randrange
 
 
-def play():
+def play(number_of_questions):
     not_a_winner = False
-    game = Game()
+    game = Game(number_of_questions)
     game.add('Chet')
     game.add('Pat')
     game.add('Sue')
     while True:
-        game.roll(randrange(5) + 1)
+        game.roll(randrange(1, 7))
 
         if randrange(9) == 7:
             not_a_winner = game.wrong_answer()
