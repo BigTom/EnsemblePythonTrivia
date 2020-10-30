@@ -7,6 +7,6 @@ Starter project for getting approvaltests up and running
 * From the command line run `pip install approvaltests`
 * Open test file and click the green arrows by the tests to run
 
-tom was here, Alice was here too
-ToF was here..
-We can all run tests
+Tom was here
+Alice was here.
+ToF was here

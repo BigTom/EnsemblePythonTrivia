@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from trivia_questions import TriviaQuestions
+
 MAX_PLAYERS = 6
 
 
@@ -9,10 +11,12 @@ class Game:
         self.purses = [0] * MAX_PLAYERS
         self.in_penalty_box = [0] * MAX_PLAYERS
 
-        self.pop_questions = []
+        self.pop_questions = TriviaQuestions(number_of_questions, 'Pop').questions
         self.science_questions = []
         self.sports_questions = []
         self.rock_questions = []
+
+        self.number_of_questions_in_category = number_of_questions
 
         self.current_player = 0
         self.is_getting_out_of_penalty_box = False
@@ -22,6 +26,22 @@ class Game:
             self.science_questions.append("Science Question %s" % i)
             self.sports_questions.append("Sports Question %s" % i)
             self.rock_questions.append(self.create_rock_question(i))
+
+    def shuffle_questions(self):
+        self.pop_questions = []
+        self.rock_questions = []
+        self.shuffle_pop_questions()
+        self.shuffle_rock_questions()
+
+    def shuffle_pop_questions(self):
+        self.pop_questions = []
+        for i in range(self.number_of_questions_in_category):
+            self.pop_questions.append("Pop Question %s" % i)
+
+    def shuffle_rock_questions(self):
+        self.rock_questions = []
+        for i in range(self.number_of_questions_in_category):
+            self.rock_questions.append("Rock Question %s" % i)
 
     def create_rock_question(self, index):
         return "Rock Question %s" % index
@@ -138,6 +158,7 @@ class Game:
         if self.current_player == len(self.players): self.current_player = 0
         return True
 
+    # Player needs 6 coins to win
     def _did_player_win(self):
         return not (self.purses[self.current_player] == 6)
 
@@ -163,4 +184,4 @@ def play(number_of_questions):
 
 
 if __name__ == '__main__':
-    play()
+    play(5)
