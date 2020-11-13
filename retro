@@ -1,3 +1,23 @@
+For next time
+Issue is running out of questions and crash on popping an empty stack
+- line 96 _ask_question method
+- Business domain question : is it alright to ask a question twice ?
+- If you run out of questions, shuffle the deck again.
+
+Next step
+- Implement reshuffling behaviour when stack is empty
+
+We accept that we don't understand the code very well
+
+We are half way through moving the questions to a seperate class
+
+Need better test names
+
+Medium term objective
+- refactor 'roll' method
+
+----
+
 Observations
 setting up environment was much faster than doing it alone
 Did not use driver navigator pattern, but worked with three, don't think it would have worked with more people
