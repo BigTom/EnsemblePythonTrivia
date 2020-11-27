@@ -25,7 +25,7 @@ class RegressionTest(unittest.TestCase):
 
     def play_trivia(self, seed=0, questions=50):
         from Trivia import play
-        string_io = StringIO()
+        string_io = StringIO(newline='\n')
 
         with redirect_stdout(string_io):
             random.seed(seed)

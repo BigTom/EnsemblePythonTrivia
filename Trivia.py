@@ -91,8 +91,6 @@ class Game:
             self.is_getting_out_of_penalty_box = False
 
     def _ask_question(self):
-        if self._current_category == 'Pop': print(self.pop_questions.pop(0))
-
         if self._current_category == 'Science':
             if len(self.science_questions) > 0:
                 print(self.science_questions.pop(0))
@@ -101,8 +99,31 @@ class Game:
                     self.science_questions.append("Science Question %s" % i)
                 print(self.science_questions.pop(0))
 
-        if self._current_category == 'Sports': print(self.sports_questions.pop(0))
-        if self._current_category == 'Rock': print(self.rock_questions.pop(0))
+        if self._current_category == 'Pop':
+            if len(self.pop_questions) > 0:
+                print(self.pop_questions.pop(0))
+            else:
+                for i in range(self.number_of_questions_in_category):
+                    self.pop_questions.append("Pop Question %s" % i)
+                print(self.pop_questions.pop(0))
+
+        if self._current_category == 'Sports':
+            if len(self.sports_questions) > 0:
+                print(self.sports_questions.pop(0))
+            else:
+                for i in range(self.number_of_questions_in_category):
+                    self.sports_questions.append("Sports Question %s" % i)
+                print(self.sports_questions.pop(0))
+
+
+        if self._current_category == 'Rock':
+            if len(self.rock_questions) > 0:
+                print(self.rock_questions.pop(0))
+            else:
+                for i in range(self.number_of_questions_in_category):
+                    self.rock_questions.append("Rock Question %s" % i)
+                print(self.rock_questions.pop(0))
+
 
     @property
     def _current_category(self):

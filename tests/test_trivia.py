@@ -62,3 +62,44 @@ class RegressionTest(unittest.TestCase):
 
         game.roll(number_of_categories)
         self.assertEqual(1, len(game.science_questions), "Science")
+
+    def test_asking_more_pop_questions_than_are_in_category_resets_the_pop_questions_in_that_category(self):
+        game = Game(2)
+        game.add('Chet')  # rename to addPlayer?
+        game.shuffle_questions()
+        pop_location = 0
+        game.roll(pop_location)
+        number_of_categories = 4
+        game.roll(number_of_categories)
+        self.assertEqual(0, len(game.pop_questions), "Pop")
+
+        game.roll(number_of_categories)
+        self.assertEqual(1, len(game.pop_questions), "Pop")
+
+
+    def test_asking_more_sports_questions_than_are_in_category_resets_the_sports_questions_in_that_category(self):
+        game = Game(2)
+        game.add('Chet')  # rename to addPlayer?
+        game.shuffle_questions()
+        sports_location = 2
+        game.roll(sports_location)
+        number_of_categories = 4
+        game.roll(number_of_categories)
+        self.assertEqual(0, len(game.sports_questions), "Sports")
+
+        game.roll(number_of_categories)
+        self.assertEqual(1, len(game.sports_questions), "Sports")
+
+
+    def test_asking_more_rock_questions_than_are_in_category_resets_the_rock_questions_in_that_category(self):
+        game = Game(2)
+        game.add('Chet')  # rename to addPlayer?
+        game.shuffle_questions()
+        rock_location = 3
+        game.roll(rock_location)
+        number_of_categories = 4
+        game.roll(number_of_categories)
+        self.assertEqual(0, len(game.rock_questions), "Rock")
+
+        game.roll(number_of_categories)
+        self.assertEqual(1, len(game.rock_questions), "Rock")
