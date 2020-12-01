@@ -14,7 +14,3 @@ Starter project for getting approvaltests up and running
 * Open test file and click the green arrows by the tests to run
 * -or- Right-click on the 'tests' directory and Run Unittests
 
-Tom
-ToF
-Alice
-Damien
