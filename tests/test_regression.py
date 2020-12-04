@@ -14,9 +14,6 @@ class RegressionTest(unittest.TestCase):
         self.reporter = GenericDiffReporterFactory().get("DiffMerge")
         # Download DiffMerge at https://sourcegear.com/diffmerge/
 
-    def test_straight_unittest(self):
-        self.assertEqual(5, 5)
-
     def test_with_seed_of_zero(self):
         verify(self.play_trivia(0), self.reporter)
 

@@ -25,26 +25,25 @@ class Game:
             self.pop_questions.append("Pop Question %s" % i)
             self.science_questions.append("Science Question %s" % i)
             self.sports_questions.append("Sports Question %s" % i)
-            self.rock_questions.append(self.create_rock_question(i))
+            self.rock_questions.append("Rock Question %s" % i)
 
     def shuffle_questions(self):
-        self.pop_questions = []
+        self.populate_list("Pop", self.pop_questions)
         self.rock_questions = []
         self.shuffle_pop_questions()
         self.shuffle_rock_questions()
 
     def shuffle_pop_questions(self):
         self.pop_questions = []
-        for i in range(self.number_of_questions_in_category):
-            self.pop_questions.append("Pop Question %s" % i)
+        self.populate_list("Pop", self.pop_questions)
 
     def shuffle_rock_questions(self):
         self.rock_questions = []
         for i in range(self.number_of_questions_in_category):
             self.rock_questions.append("Rock Question %s" % i)
-
-    def create_rock_question(self, index):
-        return "Rock Question %s" % index
+    #
+    # def create_rock_question(self, index):
+    #     return "Rock Question %s" % index
 
     def add(self, player_name):
         self.players.append(player_name)
@@ -91,19 +90,22 @@ class Game:
             self.is_getting_out_of_penalty_box = False
 
     def _ask_question(self):
-        self.ask_question_for_category("Science", self.science_questions)
-        self.ask_question_for_category("Pop", self.pop_questions)
-        self.ask_question_for_category("Sports", self.sports_questions)
-        self.ask_question_for_category("Rock", self.rock_questions)
+        self._ask_question_for_category("Science", self.science_questions)
+        self._ask_question_for_category("Pop", self.pop_questions)
+        self._ask_question_for_category("Sports", self.sports_questions)
+        self._ask_question_for_category("Rock", self.rock_questions)
 
-    def ask_question_for_category(self,label,list):
+    def _ask_question_for_category(self, label, list):
         if self._current_category == label:
             if len(list) > 0:
                 print(list.pop(0))
             else:
-                for i in range(self.number_of_questions_in_category):
-                    list.append("%s Question %s" % (label,i))
+                self.populate_list(label, list)
                 print(list.pop(0))
+
+    def populate_list(self, label, list):
+        for i in range(self.number_of_questions_in_category):
+            list.append("%s Question %s" % (label, i))
 
     @property
     def _current_category(self):
